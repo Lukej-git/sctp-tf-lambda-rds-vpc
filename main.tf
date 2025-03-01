@@ -1,13 +1,13 @@
 locals {
-  name_prefix = "sandbox"
+  name_prefix = "luke-tf"
   tags = {
-    Purpose = "CE 8 - Coaching 11"
+    Purpose = "CE 9 - Coaching 11"
   }
 }
 
 module "vpc" {
   source  = "terraform-aws-modules/vpc/aws"
-  version = "5.17.0"
+  version = "5.19.0"
   name    = "${local.name_prefix}-vpc"
 
   cidr             = "10.0.0.0/16"
